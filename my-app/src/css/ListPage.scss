@@ -1,0 +1,104 @@
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+$gray-color : #f1f1f1;
+$white-color : white;
+$dark-gray-color : #a8a6a6;
+$space-around : space-around;
+
+title {
+    @include flex();
+    justify-content: $space-around;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+.inside {
+    @include flex();
+    justify-content: $space-around;
+    background-color: $gray-color;
+    padding-top: 20px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+}
+
+li {
+    @include flex();
+    background-color: $white-color;
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 25px;
+}
+
+.id {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.profile {
+    width: 6%;
+    height: 2%;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.name {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    color: $dark-gray-color;
+}
+
+.parentcategory {
+    @include flex();
+    background-color: $gray-color;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 10px;
+    @include auto();
+}
+
+.icon {
+    width: 50px;
+    height: 17px;
+}
+
+.pcategory {
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.category {
+    background-color: $gray-color;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    @include auto();
+}
+
+.dotsicon {
+    color: $dark-gray-color;
+    margin-left: 50px;
+    padding-right: 8px;
+    @include auto();
+}

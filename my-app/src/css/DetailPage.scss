@@ -1,0 +1,138 @@
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin box {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding-left: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 80px;
+}
+
+$bg-blue-color : rgb(76, 76, 218);
+$gray-color : #f1f1f1;
+$yellow-color : #ffe057;
+$white-color : white;
+$light-blue-color : #c1ecec;
+$red-color : #e76852;
+
+$border-gray : 1px solid $gray-color;
+$radios : 5% ;
+$first-mg-top : 170px;
+$second-mg-top : 25px;
+$space : 40px;
+$font : 40px;
+
+.detail {
+    @include flex();
+    padding: 30px;
+}
+
+.profileid {
+    @include flex();
+}
+
+.img {
+    width: 90px;
+    height: 90px;
+    border-style: solid;
+    border-color: $bg-blue-color;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.boxidnamedetail {
+    margin-left: 15px;
+}
+
+.iddetail {
+    color: $bg-blue-color;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.namedetail {
+    font-size: 22px;
+}
+
+.fallowers {
+    @include box();
+    margin-top: 70px;
+    background-color: $bg-blue-color;
+    border-radius: $radios;
+    color: $white-color;
+}
+
+.secondp {
+    margin-top: 10px;
+    font-size: $font;
+}
+
+.fallowing {
+    @include box();
+    margin-top: $second-mg-top;
+    border : $border-gray;
+    border-radius: $radios;
+}
+
+.periodrate {
+    @include box();
+    margin-top: $first-mg-top;
+    margin-left: $space;
+    border : $border-gray;
+    border-radius: $radios;
+}
+
+.totalrate {
+    @include box();
+    margin-top: $second-mg-top;
+    margin-left: $space;
+    background-color: $yellow-color;
+    border-radius: $radios;
+}
+
+.post {
+    @include box();
+    margin-top: $first-mg-top;
+    margin-left: $space;
+    background-color: $light-blue-color;
+    border-radius: $radios;
+}
+
+.npostday {
+    font-size: $font;
+    margin-bottom: 10px;
+}
+
+.ntotalpost {
+    font-size: $font;
+}
+
+.totalpost {
+    margin-bottom: 10px;
+    margin-top: 95px;
+}
+
+.likes {
+    @include box();
+    margin-top: $first-mg-top;
+    margin-left: $space;
+    background-color: $red-color;
+    border-radius: $radios;
+}
+
+.comments {
+    @include box();
+    margin-top: $second-mg-top;
+    margin-left: $space;
+    border : $border-gray;
+    border-radius: $radios;
+}
+
+.space {
+    margin-right: 10px;
+}
